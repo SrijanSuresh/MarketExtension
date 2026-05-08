@@ -1,0 +1,144 @@
+:root {
+  --bg: #0b0d10;
+  --panel: #11151a;
+  --border: #1f2731;
+  --text: #d7e0ea;
+  --muted: #6b7785;
+  --accent: #4cd6a0;
+  --warn: #f3b562;
+  --danger: #ef6f6c;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "tweet"
+    "markets"
+    "signals";
+  grid-template-rows: auto auto 1fr 1fr;
+  gap: 12px;
+  padding: 12px;
+  height: 100%;
+}
+
+.grid__header {
+  grid-area: header;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.grid__header h1 {
+  font-size: 14px;
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.status {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.grid__tweet {
+  grid-area: tweet;
+}
+
+.grid__markets {
+  grid-area: markets;
+}
+
+.grid__signals {
+  grid-area: signals;
+}
+
+section h2 {
+  font-size: 11px;
+  margin: 0 0 6px 0;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.tweet {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: auto;
+}
+
+.list li {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+.list li.empty {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+  justify-content: center;
+  font-style: italic;
+}
+
+.item-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.item-sub {
+  font-size: 10px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.item-meta {
+  flex-shrink: 0;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}

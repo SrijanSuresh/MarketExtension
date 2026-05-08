@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarketExtension</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <main class="grid">
+      <header class="grid__header">
+        <h1>MarketExtension</h1>
+        <span id="status" class="status">idle</span>
+      </header>
+
+      <section class="grid__tweet">
+        <h2>Focused tweet</h2>
+        <p id="tweet-text" class="tweet">Scroll X to focus a tweet…</p>
+      </section>
+
+      <section class="grid__markets">
+        <h2>Markets</h2>
+        <ul id="markets" class="list"></ul>
+      </section>
+
+      <section class="grid__signals">
+        <h2>Signals</h2>
+        <ul id="signals" class="list"></ul>
+      </section>
+    </main>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
